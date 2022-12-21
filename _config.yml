@@ -36,7 +36,7 @@ author: Daniel Yoo
 logo: /assets/images/solomonsknot.png
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-252581390-1
 
 permalink: /:year/:month/:day/:title/
 
