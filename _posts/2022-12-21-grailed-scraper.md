@@ -22,7 +22,7 @@ Some readers with advanced technical knowledge may be wondering why I chose to u
 In terms of speed, if you want to improve the run-time for a similar program, I would advise using Selenium for the navigation alongside a faster parser like BeautifulSoup to gather the data from the HTML.
 
 # Step 1: Handling the Login Screen 🤸
-First, we have to handle the log-in wall Grailed has when you try to access their [sold listings page](https://www.grailed.com/sold). Instead of fully automating this process, I have programmed my scraper to pause the WebDriver after entering the user details, to give the user a chance to complete the captcha themself (this implementation is done in the main() function, but should be easy to implement yourself). You can see below my code for this function:
+First, we have to handle the log-in wall Grailed has when you try to access their [sold listings page](https://www.grailed.com/sold). Instead of fully automating this process, I have programmed my scraper to pause the WebDriver after entering the user details. This gives the user a chance to complete the captcha themself. You can see below my code for this function:
 ```python
 def user_login(driver):
     print("> user_login() called...")
