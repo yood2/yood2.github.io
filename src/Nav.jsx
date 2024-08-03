@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <Grid templateColumns="repeat(3, 10fr)" gap={1} justifyItems="center">
             <GridItem>
-                <Link to="/resume">
+                <Link to="https://drive.google.com/file/d/1f4ewsQLKzvn5ySpYB-0WXGpTqp2jTI9e/view?usp=sharing">
                     <Text>📄 Resume</Text>
                 </Link>
             </GridItem>
