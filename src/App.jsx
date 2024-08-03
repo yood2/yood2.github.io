@@ -1,14 +1,23 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { createRoot } from 'react-dom/client';
 import { ChakraProvider } from '@chakra-ui/react';
-import NameCard from './NameCard';
+import Home from './Home';
+import Resume from './Resume';
 
 const App = () => {
     return (
-        <ChakraProvider>
-            <NameCard />
-        </ChakraProvider>
+        <>
+            <ChakraProvider>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="resume" element={<Resume />} />
+                    </Routes>
+                </BrowserRouter>
+            </ChakraProvider>
+        </>
     );
 };
 
