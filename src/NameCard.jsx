@@ -10,6 +10,7 @@ const NameCard = () => {
                     dan yoo
                 </Text>
                 <Text fontSize="30">CS & Business @ UBC</Text>
+                <p>test</p>
             </GridItem>
             <GridItem colSpan={1} />
         </Grid>
