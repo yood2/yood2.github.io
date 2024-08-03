@@ -11,6 +11,7 @@ const NameCard = () => {
                 </Text>
                 <Text fontSize="30">CS & Business @ UBC</Text>
                 <p>test</p>
+                <p>Another test</p>
             </GridItem>
             <GridItem colSpan={1} />
         </Grid>
