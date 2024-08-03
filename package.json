@@ -2,7 +2,7 @@
     "name": "portfolio-site",
     "private": true,
     "version": "0.0.0",
-    "homepage": "https://yood2.github.io/my-site",
+    "homepage": "https://yood2.github.io/",
     "type": "module",
     "scripts": {
         "predeploy": "npm run build",
