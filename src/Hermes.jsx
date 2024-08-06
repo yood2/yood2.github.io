@@ -10,6 +10,8 @@ import {
     Tr,
     Th,
     Td,
+    Alert,
+    AlertIcon,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import fetchOptimize from './fetchOptimize';
@@ -37,15 +39,11 @@ const diversifiedPortfolio = [
     {'WMT': 0.05}
 ];
 
-const initialTickers = diversifiedPortfolio.map((stock) => {
-    const [symbol, weight] = Object.entries(stock)[0];
-    return { symbol, weight };
-});
-
 const Hermes = () => {
     const [tickerInput, setTickerInput] = useState('');
-    const [tickers, setTickers] = useState(initialTickers);
+    const [tickers, setTickers] = useState([]);
     const [metrics, setMetrics] = useState(null); // State to store metrics
+    const [warning, setWarning] = useState(''); // State to manage warning message
 
     const handleAddTicker = () => {
         if (tickerInput.trim() !== '') {
@@ -81,6 +79,13 @@ const Hermes = () => {
     };
 
     const handleCalculate = async () => {
+        if (tickers.length < 2) {
+            setWarning('You need at least 2 stocks to calculate metrics.');
+            return;
+        }
+
+        setWarning(''); // Clear the warning if conditions are met
+
         console.log('Calculating weights for:', tickers);
         let portfolio = tickers.reduce((acc, ticker) => {
             acc[ticker.symbol] = ticker.weight;
@@ -97,6 +102,13 @@ const Hermes = () => {
     };
 
     const handleOptimize = async () => {
+        if (tickers.length < 2) {
+            setWarning('You need at least 2 stocks to optimize.');
+            return;
+        }
+
+        setWarning(''); // Clear the warning if conditions are met
+
         console.log('Optimizing portfolio:', tickers);
         const symbols = tickers.map((ticker) => ticker.symbol);
 
@@ -177,6 +189,14 @@ const Hermes = () => {
                         </Tbody>
                     </Table>
                 )}
+
+                {warning && ( // Conditionally render the warning message
+                    <Alert status="warning" mt={4}>
+                        <AlertIcon />
+                        {warning}
+                    </Alert>
+                )}
+
                 <HStack>
                     <Button onClick={handleCalculate}>Calculate</Button>
                     <Button onClick={handleOptimize}>Optimize</Button>
