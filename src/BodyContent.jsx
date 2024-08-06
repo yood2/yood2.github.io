@@ -43,7 +43,7 @@ const BodyContent = () => {
                             EKG gooseneck. If you have any recommendations for
                             light roast beans with floral notes let me know!
                             <Link
-                                to="https://github.com/yood2/hermes-api"
+                                to="/coffee"
                                 style={{
                                     textDecoration: 'underline',
                                     marginLeft: '4px',
