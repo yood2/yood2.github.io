@@ -11,10 +11,10 @@ const BodyContent = () => {
                         <Text textAlign={'center'}>
                             I am a student at the University of British Columbia
                             doing a combined major in Business and Computer
-                            Science. I like programming, chess, weightlifting,
-                            and coffee. Currently fixated on Python web
-                            frameworks, data analysis libraries, and machine
-                            learning algorithms.
+                            Science. I like programming, chess, running,
+                            weightlifting, and coffee. Currently fixated on
+                            Python web frameworks, data analysis libraries, and
+                            machine learning algorithms.
                         </Text>
                     </VStack>
 
@@ -40,7 +40,8 @@ const BodyContent = () => {
                         <Text textAlign={'center'}>
                             I love coffee. Current daily set up is a v60
                             pourover using Fellow Opus grinder and the classic
-                            EKG gooseneck.{' '}
+                            EKG gooseneck. If you have any recommendations for
+                            light roast beans with floral notes let me know!
                             <Link
                                 to="/Coffee"
                                 style={{
@@ -48,7 +49,7 @@ const BodyContent = () => {
                                     marginLeft: '4px',
                                 }}
                             >
-                                Notes and reviews here.
+                                Notes and reviews on some roasters and cafes.
                             </Link>
                         </Text>
                     </VStack>
