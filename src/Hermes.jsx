@@ -18,13 +18,12 @@ const Hermes = () => {
     const [tickerInput, setTickerInput] = useState('');
     const [tickers, setTickers] = useState([]);
 
-    const debug = () => {
-        console.log(tickers);
-    };
+    // const debug = () => {
+    //     console.log(tickers);
+    // };
 
     const handleAddTicker = () => {
         if (tickerInput.trim() !== '') {
-            // Check for duplicate ticker symbols
             const isDuplicate = tickers.some(
                 (ticker) =>
                     ticker.symbol.toLowerCase() ===
@@ -52,7 +51,6 @@ const Hermes = () => {
     };
 
     const handleRemoveTicker = (index) => {
-        // Remove the ticker at the specified index
         const updatedTickers = tickers.filter((_, i) => i !== index);
         setTickers(updatedTickers);
     };
@@ -61,10 +59,18 @@ const Hermes = () => {
         console.log('Calculating weights for:', tickers);
     };
 
-    const handleOptimize = () => {
+    const handleOptimize = async () => {
         console.log('Optimizing portfolio:', tickers);
-        let symbols = tickers.map((ticker) => ticker.symbol);
-        fetchOptimize(symbols);
+        const symbols = tickers.map((ticker) => ticker.symbol);
+
+        const optimalWeights = await fetchOptimize(symbols);
+
+        const updatedTickers = tickers.map((ticker) => ({
+            ...ticker,
+            weight: optimalWeights[ticker.symbol] || 0,
+        }));
+
+        setTickers(updatedTickers);
     };
 
     return (
@@ -73,7 +79,10 @@ const Hermes = () => {
                 <Text fontSize="xl" fontWeight="bold">
                     Hermes API
                 </Text>
-                <Text>Input ticker symbols</Text>
+                <Text>
+                    Input ticker symbols. Currently using data from (01/01/2022)
+                    - (01/01/2024).
+                </Text>
 
                 <HStack>
                     <Input
@@ -116,7 +125,6 @@ const Hermes = () => {
                                     </Td>
                                     <Td>
                                         <Button
-                                            colorScheme="red"
                                             onClick={() =>
                                                 handleRemoveTicker(index)
                                             }
@@ -130,13 +138,9 @@ const Hermes = () => {
                     </Table>
                 )}
                 <HStack>
-                    <Button onClick={handleCalculate} colorScheme="blue">
-                        Calculate
-                    </Button>
-                    <Button onClick={handleOptimize} colorScheme="green">
-                        Optimize
-                    </Button>
-                    <Button onClick={debug}>DEBUG</Button>
+                    <Button onClick={handleCalculate}>Calculate</Button>
+                    <Button onClick={handleOptimize}>Optimize</Button>
+                    {/* <Button onClick={debug}>DEBUG</Button> */}
                 </HStack>
             </VStack>
         </>

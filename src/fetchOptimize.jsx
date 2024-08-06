@@ -8,6 +8,9 @@ const fetchOptimize = async (tickers) => {
     const queryString = new URLSearchParams(params).toString();
 
     try {
+        // const res = await fetch(
+        //     `http://127.0.0.1:5000/portfolio?${queryString}`
+        // );
         const res = await fetch(
             `https://hermes-api-ttic.onrender.com/portfolio?${queryString}`
         );
@@ -17,9 +20,7 @@ const fetchOptimize = async (tickers) => {
         }
 
         const data = await res.json();
-
-        console.log(data);
-        return data;
+        return data.optimal_weights;
     } catch (error) {
         console.error('Error fetching optimization data:', error);
     }
