@@ -13,14 +13,39 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import fetchOptimize from './fetchOptimize';
+import fetchCalculate from './fetchCalculate';
+
+// prettier-ignore
+const diversifiedPortfolio = [
+    {'AAPL': 0.05},
+    {'MSFT': 0.05},
+    {'NVDA': 0.05},
+    {'GOOGL': 0.05},
+    {'JNJ': 0.05},
+    {'PFE': 0.05},
+    {'MRK': 0.05},
+    {'ABBV': 0.05},
+    {'JPM': 0.05},
+    {'BRK.B': 0.05},
+    {'AMZN': 0.05},
+    {'TSLA': 0.05},
+    {'HD': 0.05},
+    {'NKE': 0.05},
+    {'PG': 0.05},
+    {'KO': 0.05},
+    {'PEP': 0.05},
+    {'WMT': 0.05}
+];
+
+const initialTickers = diversifiedPortfolio.map((stock) => {
+    const [symbol, weight] = Object.entries(stock)[0];
+    return { symbol, weight };
+});
 
 const Hermes = () => {
     const [tickerInput, setTickerInput] = useState('');
-    const [tickers, setTickers] = useState([]);
-
-    // const debug = () => {
-    //     console.log(tickers);
-    // };
+    const [tickers, setTickers] = useState(initialTickers);
+    const [metrics, setMetrics] = useState(null); // State to store metrics
 
     const handleAddTicker = () => {
         if (tickerInput.trim() !== '') {
@@ -55,22 +80,38 @@ const Hermes = () => {
         setTickers(updatedTickers);
     };
 
-    const handleCalculate = () => {
+    const handleCalculate = async () => {
         console.log('Calculating weights for:', tickers);
+        let portfolio = tickers.reduce((acc, ticker) => {
+            acc[ticker.symbol] = ticker.weight;
+            return acc;
+        }, {});
+
+        try {
+            const metrics = await fetchCalculate(portfolio);
+            console.log('Metrics:', metrics);
+            setMetrics(metrics); // Update state with fetched metrics
+        } catch (error) {
+            console.error('Error calculating metrics:', error);
+        }
     };
 
     const handleOptimize = async () => {
         console.log('Optimizing portfolio:', tickers);
         const symbols = tickers.map((ticker) => ticker.symbol);
 
-        const optimalWeights = await fetchOptimize(symbols);
+        try {
+            const optimalWeights = await fetchOptimize(symbols);
 
-        const updatedTickers = tickers.map((ticker) => ({
-            ...ticker,
-            weight: optimalWeights[ticker.symbol] || 0,
-        }));
+            const updatedTickers = tickers.map((ticker) => ({
+                ...ticker,
+                weight: optimalWeights[ticker.symbol] || 0,
+            }));
 
-        setTickers(updatedTickers);
+            setTickers(updatedTickers);
+        } catch (error) {
+            console.error('Error optimizing portfolio:', error);
+        }
     };
 
     return (
@@ -100,8 +141,7 @@ const Hermes = () => {
                             <Tr>
                                 <Th>Ticker Symbol</Th>
                                 <Th>Weight (decimal)</Th>
-                                <Th>Action</Th>{' '}
-                                {/* Add a column header for actions */}
+                                <Th>Action</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
@@ -140,8 +180,24 @@ const Hermes = () => {
                 <HStack>
                     <Button onClick={handleCalculate}>Calculate</Button>
                     <Button onClick={handleOptimize}>Optimize</Button>
-                    {/* <Button onClick={debug}>DEBUG</Button> */}
                 </HStack>
+
+                {/* Render metrics at the bottom */}
+                {metrics && (
+                    <VStack mt={6} spacing={4}>
+                        <Text fontSize="lg" fontWeight="bold">
+                            Portfolio Metrics
+                        </Text>
+                        <Text>
+                            Return: {(metrics.return * 100).toFixed(2)}%
+                        </Text>
+                        <Text>
+                            Standard Deviation: {(metrics.std * 100).toFixed(2)}
+                            %
+                        </Text>
+                        <Text>Sharpe Ratio: {metrics.sharpe.toFixed(4)}</Text>
+                    </VStack>
+                )}
             </VStack>
         </>
     );
