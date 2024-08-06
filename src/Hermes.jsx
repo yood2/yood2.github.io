@@ -139,7 +139,8 @@ const Hermes = () => {
                 </Text>
                 <Text>
                     Use Mean-Variance analysis to choose an optimal portfolio on the portfolio frontier. Currently using data from (01/01/2022)
-                    - (01/01/2024).                             <Link
+                    - (01/01/2024). This is just a front-end that is consuming a RESTful API hosted on Render's free tier (performance spins down if inactive for a while).
+                            <Link
                                 to="https://github.com/yood2/hermes-api"
                                 style={{
                                     textDecoration: 'underline',
