@@ -9,21 +9,17 @@ const Socials = () => {
                 <HStack spacing={14}>
                     <Link to="https://www.instagram.com/yoodanni/">
                         <Image
-                            src="../public/instagram.svg"
+                            src="./instagram.svg"
                             alt="instagram"
                             boxSize="35px"
                         />
                     </Link>
                     <Link to="https://github.com/yood2">
-                        <Image
-                            src="../public/github.svg"
-                            alt="github"
-                            boxSize="35px"
-                        />
+                        <Image src="./github.svg" alt="github" boxSize="35px" />
                     </Link>
                     <Link to="https://www.linkedin.com/in/yood2/">
                         <Image
-                            src="../public/linkedin.svg"
+                            src="./linkedin.svg"
                             alt="linkedin"
                             boxSize="35px"
                         />
