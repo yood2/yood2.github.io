@@ -1,13 +1,15 @@
 import { Box, VStack } from '@chakra-ui/react';
 import NameCard from './NameCard';
-import Nav from './Navbar';
+import Socials from './Socials';
+import BodyContent from './BodyContent';
 
 const Home = () => {
     return (
-        <Box w="60vw" mx="auto" mt={8}>
-            <VStack spacing={4} align="stretch">
+        <Box w="60%" mx="auto" mt={8} mb={20}>
+            <VStack spacing={20} align="stretch">
                 <NameCard />
-                <Nav />
+                <Socials />
+                <BodyContent />
             </VStack>
         </Box>
     );

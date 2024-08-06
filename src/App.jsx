@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import { ChakraProvider } from '@chakra-ui/react';
 import Home from './Home';
-import Projects from './Projects';
+import Hermes from './Hermes';
+import Coffee from './Coffee';
 
 const App = () => {
     return (
@@ -12,7 +13,8 @@ const App = () => {
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/hermes" element={<Hermes />} />
+                        <Route path="/coffee" element={<Coffee />} />
                     </Routes>
                 </BrowserRouter>
             </ChakraProvider>
