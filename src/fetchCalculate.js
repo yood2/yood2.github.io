@@ -15,8 +15,6 @@ const fetchCalculate = async (portfolio) => {
         //     body: JSON.stringify(dataPayload),
         // });
 
-        console.log(portfolio);
-
         const res = await fetch(
             'https://hermes-api-ttic.onrender.com/calculate?',
             {

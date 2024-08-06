@@ -1,5 +1,6 @@
 import {
     Button,
+    Box,
     Text,
     VStack,
     HStack,
@@ -16,28 +17,29 @@ import {
 import { useState } from 'react';
 import fetchOptimize from './fetchOptimize';
 import fetchCalculate from './fetchCalculate';
+import { Link } from 'react-router-dom';
 
 // prettier-ignore
-const diversifiedPortfolio = [
-    {'AAPL': 0.05},
-    {'MSFT': 0.05},
-    {'NVDA': 0.05},
-    {'GOOGL': 0.05},
-    {'JNJ': 0.05},
-    {'PFE': 0.05},
-    {'MRK': 0.05},
-    {'ABBV': 0.05},
-    {'JPM': 0.05},
-    {'BRK.B': 0.05},
-    {'AMZN': 0.05},
-    {'TSLA': 0.05},
-    {'HD': 0.05},
-    {'NKE': 0.05},
-    {'PG': 0.05},
-    {'KO': 0.05},
-    {'PEP': 0.05},
-    {'WMT': 0.05}
-];
+// const diversifiedPortfolio = [
+//     {'AAPL': 0.05},
+//     {'MSFT': 0.05},
+//     {'NVDA': 0.05},
+//     {'GOOGL': 0.05},
+//     {'JNJ': 0.05},
+//     {'PFE': 0.05},
+//     {'MRK': 0.05},
+//     {'ABBV': 0.05},
+//     {'JPM': 0.05},
+//     {'BRK.B': 0.05},
+//     {'AMZN': 0.05},
+//     {'TSLA': 0.05},
+//     {'HD': 0.05},
+//     {'NKE': 0.05},
+//     {'PG': 0.05},
+//     {'KO': 0.05},
+//     {'PEP': 0.05},
+//     {'WMT': 0.05}
+// ];
 
 const Hermes = () => {
     const [tickerInput, setTickerInput] = useState('');
@@ -84,18 +86,21 @@ const Hermes = () => {
             return;
         }
 
-        setWarning(''); // Clear the warning if conditions are met
+        setWarning('');
 
         console.log('Calculating weights for:', tickers);
+
         let portfolio = tickers.reduce((acc, ticker) => {
             acc[ticker.symbol] = ticker.weight;
             return acc;
         }, {});
 
+        console.log(portfolio);
+
         try {
             const metrics = await fetchCalculate(portfolio);
             console.log('Metrics:', metrics);
-            setMetrics(metrics); // Update state with fetched metrics
+            setMetrics(metrics); 
         } catch (error) {
             console.error('Error calculating metrics:', error);
         }
@@ -107,7 +112,7 @@ const Hermes = () => {
             return;
         }
 
-        setWarning(''); // Clear the warning if conditions are met
+        setWarning('');
 
         console.log('Optimizing portfolio:', tickers);
         const symbols = tickers.map((ticker) => ticker.symbol);
@@ -127,14 +132,22 @@ const Hermes = () => {
     };
 
     return (
-        <>
+        <Box w="60%" mx="auto" mt={8} mb={20}>
             <VStack spacing={4}>
                 <Text fontSize="xl" fontWeight="bold">
                     Hermes API
                 </Text>
                 <Text>
-                    Input ticker symbols. Currently using data from (01/01/2022)
-                    - (01/01/2024).
+                    Use Mean-Variance analysis to choose an optimal portfolio on the portfolio frontier. Currently using data from (01/01/2022)
+                    - (01/01/2024).                             <Link
+                                to="/Coffee"
+                                style={{
+                                    textDecoration: 'underline',
+                                    marginLeft: '4px',
+                                }}
+                            >
+                                Github Repo.
+                            </Link>
                 </Text>
 
                 <HStack>
@@ -190,7 +203,7 @@ const Hermes = () => {
                     </Table>
                 )}
 
-                {warning && ( // Conditionally render the warning message
+                {warning && (
                     <Alert status="warning" mt={4}>
                         <AlertIcon />
                         {warning}
@@ -202,7 +215,6 @@ const Hermes = () => {
                     <Button onClick={handleOptimize}>Optimize</Button>
                 </HStack>
 
-                {/* Render metrics at the bottom */}
                 {metrics && (
                     <VStack mt={6} spacing={4}>
                         <Text fontSize="lg" fontWeight="bold">
@@ -219,7 +231,7 @@ const Hermes = () => {
                     </VStack>
                 )}
             </VStack>
-        </>
+        </Box>
     );
 };
 
