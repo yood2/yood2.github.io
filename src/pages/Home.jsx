@@ -1,7 +1,7 @@
 import { Box, VStack } from '@chakra-ui/react';
-import NameCard from './NameCard';
-import Socials from './Socials';
-import BodyContent from './BodyContent';
+import NameCard from '../components/NameCard';
+import Socials from '../components/Socials';
+import BodyContent from '../components/BodyContent';
 
 const Home = () => {
     return (
