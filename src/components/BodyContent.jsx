@@ -13,7 +13,7 @@ const BodyContent = () => {
                             doing a combined major in Business and Computer
                             Science. I like programming, chess, running,
                             weightlifting, and coffee. Currently fixated on
-                            Python web frameworks, data analysis libraries, and
+                            Python internals, data analysis libraries, and
                             machine learning algorithms.
                         </Text>
                     </VStack>
