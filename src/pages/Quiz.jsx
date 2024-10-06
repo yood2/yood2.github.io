@@ -18,7 +18,7 @@ const questions = [
             { text: 'No-Name brand', value: 1 },
             { text: 'Buy groceries and make my own', value: 4 },
             { text: "Skip soup, it's not my favorite", value: 0 },
-            { text: 'Make everything from scratch', value: 3 },
+            { text: 'Slaughter a chicken and make my own noodles', value: 3 },
         ],
     },
     {
@@ -27,9 +27,12 @@ const questions = [
         choices: [
             { text: 'Crave something sweet', value: 1 },
             { text: 'Think about having pho', value: 4 },
-            { text: 'Feel really down', value: 0 },
+            { text: 'Time to kms', value: 0 },
             { text: 'Feel a bit sad but try to move on', value: 2 },
-            { text: 'Consider asking for extra credit work', value: 3 },
+            {
+                text: 'Break into your profs house and threaten to kill their dog',
+                value: 3,
+            },
         ],
     },
     {
@@ -39,8 +42,8 @@ const questions = [
             { text: "Sad, but I'll treat myself to cake", value: 1 },
             { text: "Realize we weren't that close anyway", value: 0 },
             { text: 'Wonder if they forgot to invite me', value: 2 },
-            { text: 'Feel very upset', value: 3 },
-            { text: 'Remember to stay calm and understanding', value: 4 },
+            { text: 'Kill', value: 3 },
+            { text: 'Braindead', value: 4 },
         ],
     },
     {
@@ -48,10 +51,10 @@ const questions = [
             'You wake up in the middle of the night to a strange noise. What do you do?',
         choices: [
             { text: "I'm so scared! Hide under the covers", value: 1 },
-            { text: 'Grab my trusty baseball bat', value: 3 },
+            { text: 'Bring out your homemade guns', value: 3 },
             { text: 'Say a quick prayer', value: 4 },
             { text: 'Must be a dream, go back to sleep', value: 2 },
-            { text: "Hope it's just the cat", value: 0 },
+            { text: 'Hope they kill me', value: 0 },
         ],
     },
     {
@@ -61,17 +64,17 @@ const questions = [
             { text: 'Forgetting to delete my browser history', value: 3 },
             { text: 'I sneezed in public once (˶˃ ᵕ ˂˶)', value: 1 },
             { text: 'Walking into a glass door', value: 2 },
-            { text: 'My entire life is embarrassing', value: 0 },
+            { text: 'Being born', value: 0 },
         ],
     },
     {
         question: 'Your best friend betrays your trust. You feel:',
         choices: [
-            { text: 'Heartbroken', value: 2 },
+            { text: 'Sad', value: 2 },
             { text: 'Angry', value: 3 },
-            { text: 'Completely devastated', value: 0 },
-            { text: 'Time for comfort food!', value: 1 },
-            { text: 'Plot an elaborate revenge scheme', value: 4 },
+            { text: 'was bound to happen', value: 0 },
+            { text: 'nooo uwu im gonna eat cake', value: 1 },
+            { text: 'Kill', value: 4 },
         ],
     },
 ];
