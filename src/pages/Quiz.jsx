@@ -43,6 +43,37 @@ const questions = [
             { text: 'Remember to stay calm and understanding', value: 4 },
         ],
     },
+    {
+        question:
+            'You wake up in the middle of the night to a strange noise. What do you do?',
+        choices: [
+            { text: "I'm so scared! Hide under the covers", value: 1 },
+            { text: 'Grab my trusty baseball bat', value: 3 },
+            { text: 'Say a quick prayer', value: 4 },
+            { text: 'Must be a dream, go back to sleep', value: 2 },
+            { text: "Hope it's just the cat", value: 0 },
+        ],
+    },
+    {
+        question: "What's your most embarrassing moment?",
+        choices: [
+            { text: 'Getting a bad mark on a test', value: 4 },
+            { text: 'Forgetting to delete my browser history', value: 3 },
+            { text: 'I sneezed in public once (˶˃ ᵕ ˂˶)', value: 1 },
+            { text: 'Walking into a glass door', value: 2 },
+            { text: 'My entire life is embarrassing', value: 0 },
+        ],
+    },
+    {
+        question: 'Your best friend betrays your trust. You feel:',
+        choices: [
+            { text: 'Heartbroken', value: 2 },
+            { text: 'Angry', value: 3 },
+            { text: 'Completely devastated', value: 0 },
+            { text: 'Time for comfort food!', value: 1 },
+            { text: 'Plot an elaborate revenge scheme', value: 4 },
+        ],
+    },
 ];
 
 const endingPages = [
@@ -95,7 +126,7 @@ const Quiz = () => {
     const calculateFinalScore = () => {
         const sum = answers.reduce((acc, val) => acc + val, 0);
         const average = sum / answers.length;
-        return Math.ceil(average);
+        return Math.floor(average);
     };
 
     const restartQuiz = () => {

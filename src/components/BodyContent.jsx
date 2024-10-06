@@ -55,7 +55,7 @@ const BodyContent = () => {
                     </VStack>
 
                     <VStack>
-                        <Text fontSize={30}>☕️ QUIZ</Text>
+                        <Text fontSize={30}>QUIZ</Text>
                         <Text textAlign={'center'}>
                             <Link
                                 to="/quiz"
