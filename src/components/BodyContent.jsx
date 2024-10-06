@@ -13,8 +13,8 @@ const BodyContent = () => {
                             doing a combined major in Business and Computer
                             Science. I like programming, chess, running,
                             weightlifting, and coffee. Currently fixated on
-                            Python internals and optimization, data analysis libraries, and
-                            machine learning algorithms.
+                            Python internals and optimization, data analysis
+                            libraries, and machine learning algorithms.
                         </Text>
                     </VStack>
 
@@ -50,6 +50,21 @@ const BodyContent = () => {
                                 }}
                             >
                                 Notes and reviews on some roasters and cafes.
+                            </Link>
+                        </Text>
+                    </VStack>
+
+                    <VStack>
+                        <Text fontSize={30}>☕️ QUIZ</Text>
+                        <Text textAlign={'center'}>
+                            <Link
+                                to="/quiz"
+                                style={{
+                                    textDecoration: 'underline',
+                                    marginLeft: '4px',
+                                }}
+                            >
+                                QUIZ
                             </Link>
                         </Text>
                     </VStack>
