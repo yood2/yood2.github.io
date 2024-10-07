@@ -54,7 +54,7 @@ const BodyContent = () => {
                         </Text>
                     </VStack>
 
-                    <VStack>
+                    {/* <VStack>
                         <Text fontSize={30}>QUIZ</Text>
                         <Text textAlign={'center'}>
                             <Link
@@ -67,7 +67,7 @@ const BodyContent = () => {
                                 QUIZ
                             </Link>
                         </Text>
-                    </VStack>
+                    </VStack> */}
                 </VStack>
             </Center>
         </>
