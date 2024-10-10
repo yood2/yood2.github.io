@@ -1,12 +1,40 @@
 import Personal from '@/components/personal';
 import Navbar from '@/components/navbar';
+import Project, { ProjectProps } from '@/components/project';
+
+const projects: ProjectProps[] = [
+    {
+        image: '/images/cat.jpeg',
+        title: 'cat',
+        desc: 'its a cat. a really cute one! YAY FOR CATS! WOOHOOO',
+        tags: ['cat', 'not a dog', 'react?', 'wowza'],
+        source: 'https://github.com/',
+        demo: 'https://github.com/',
+    },
+    {
+        image: '/images/cat.jpeg',
+        title: 'cat',
+        desc: 'its a cat. a really cute one! YAY FOR CATS! WOOHOOO',
+        tags: ['cat', 'not a dog', 'react?', 'wowza'],
+        source: 'https://github.com/',
+        demo: 'https://github.com/',
+    },
+    {
+        image: '/images/cat.jpeg',
+        title: 'cat',
+        desc: 'its a cat. a really cute one! YAY FOR CATS! WOOHOOO',
+        tags: ['cat', 'not a dog', 'react?', 'wowza'],
+        source: 'https://github.com/',
+        demo: 'https://github.com/',
+    },
+];
 
 export default function Home() {
     return (
         <div className="h-full flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
             <div className="flex flex-col space-y-6 max-w-2xl w-full">
                 <Navbar />
-                <section id="about">
+                <section id="about" className="space-y-4 py-4">
                     <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
                         Hi, I&apos;m Daniel! 👋
                     </h3>
@@ -19,43 +47,15 @@ export default function Home() {
                         optimization.
                     </p>
                 </section>
-                <section id="projects">
+                <section id="projects" className="space-y-4 py-4">
                     <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-                        Projects
+                        Some things I&apos;m working on:
                     </h3>
-                    <p className="text-base sm:text-lg">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus sodales sollicitudin neque eu viverra. Etiam
-                        egestas nec nunc et faucibus. Aenean interdum neque et
-                        eros rutrum, at ornare mauris luctus. Ut felis quam,
-                        iaculis tristique accumsan id, interdum eget massa.
-                        Proin porta elit nisl, a tincidunt ligula cursus vitae.
-                        Quisque in felis non orci ultricies commodo. Vestibulum
-                        efficitur diam sed nibh semper gravida. Donec commodo
-                        sed dolor et tristique. Suspendisse orci massa, ultrices
-                        sit amet dui vitae, ornare faucibus nunc. Sed at semper
-                        purus. Curabitur vel facilisis felis. Quisque nisl dui,
-                        tincidunt sed lorem sit amet, vehicula faucibus urna.
-                    </p>
-                </section>
-                <section id="coffee">
-                    <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-                        Coffee
-                    </h3>
-                    <p className="text-base sm:text-lg">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus sodales sollicitudin neque eu viverra. Etiam
-                        egestas nec nunc et faucibus. Aenean interdum neque et
-                        eros rutrum, at ornare mauris luctus. Ut felis quam,
-                        iaculis tristique accumsan id, interdum eget massa.
-                        Proin porta elit nisl, a tincidunt ligula cursus vitae.
-                        Quisque in felis non orci ultricies commodo. Vestibulum
-                        efficitur diam sed nibh semper gravida. Donec commodo
-                        sed dolor et tristique. Suspendisse orci massa, ultrices
-                        sit amet dui vitae, ornare faucibus nunc. Sed at semper
-                        purus. Curabitur vel facilisis felis. Quisque nisl dui,
-                        tincidunt sed lorem sit amet, vehicula faucibus urna.
-                    </p>
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+                        {projects.map((project, index) => (
+                            <Project key={index} {...project} />
+                        ))}
+                    </div>
                 </section>
             </div>
         </div>

@@ -8,9 +8,9 @@ export default function Navbar() {
                 <Button variant="link" className="px-2">
                     <a href="#about">About Me</a>
                 </Button>
-                <Button variant="link" className="px-2">
+                {/* <Button variant="link" className="px-2">
                     <a href="#projects">Projects</a>
-                </Button>
+                </Button> */}
                 <Button variant="link" className="px-2">
                     <a href="#coffee">Coffee</a>
                 </Button>

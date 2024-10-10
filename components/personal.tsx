@@ -31,7 +31,7 @@ const Arrow = () => (
 
 export default function Personal() {
     return (
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-0 py-4">
             <Button variant="link" className="px-0 justify-start">
                 <Arrow />
                 LinkedIn
