@@ -6,13 +6,13 @@ export default function Navbar() {
         <nav className="w-full">
             <div className="flex justify-start items-center space-x-4 py-2">
                 <Button variant="link" className="px-2">
-                    <a href="#about">About Me</a>
+                    <a href="/">About Me</a>
                 </Button>
                 {/* <Button variant="link" className="px-2">
                     <a href="#projects">Projects</a>
                 </Button> */}
                 <Button variant="link" className="px-2">
-                    <a href="#coffee">Coffee</a>
+                    <a href="/coffee">Coffee</a>
                 </Button>
             </div>
             <Separator />

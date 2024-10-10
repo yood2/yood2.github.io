@@ -5,10 +5,17 @@ import Project, { ProjectProps } from '@/components/project';
 const projects: ProjectProps[] = [
     {
         image: '/images/cat.jpeg',
-        title: 'cat',
-        desc: 'its a cat. a really cute one! YAY FOR CATS! WOOHOOO',
-        tags: ['cat', 'not a dog', 'react?', 'wowza'],
-        source: 'https://github.com/',
+        title: 'Neuro-Signal Visualizer',
+        desc: 'Created a data visualization component for the UBC Multifaceted Innovations in NeuroTechnology design team. Can receive up to 256 signals per second and render EEG data with custom settings.',
+        tags: [
+            'Typescript',
+            'React',
+            'Next.js',
+            'TailwindCSS',
+            'ReCharts',
+            'Shadcn/ui',
+        ],
+        source: 'https://github.com/yood2/frontend-product-simulated-viz',
         demo: 'https://github.com/',
     },
     {
@@ -17,15 +24,7 @@ const projects: ProjectProps[] = [
         desc: 'its a cat. a really cute one! YAY FOR CATS! WOOHOOO',
         tags: ['cat', 'not a dog', 'react?', 'wowza'],
         source: 'https://github.com/',
-        demo: 'https://github.com/',
-    },
-    {
-        image: '/images/cat.jpeg',
-        title: 'cat',
-        desc: 'its a cat. a really cute one! YAY FOR CATS! WOOHOOO',
-        tags: ['cat', 'not a dog', 'react?', 'wowza'],
-        source: 'https://github.com/',
-        demo: 'https://github.com/',
+        // demo: 'https://github.com/',
     },
 ];
 
