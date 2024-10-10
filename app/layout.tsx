@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Navbar from '@/components/navbar';
 import localFont from 'next/font/local';
 import './globals.css';
 
@@ -28,7 +29,12 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                {children}
+                <div className="h-full flex justify-center items-center p-4 sm:p-6 md:p-8 lg:p-10">
+                    <div className="flex flex-col space-y-6 max-w-2xl w-full">
+                        <Navbar />
+                        {children}
+                    </div>
+                </div>
             </body>
         </html>
     );
