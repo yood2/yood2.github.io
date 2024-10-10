@@ -19,9 +19,9 @@ const projects: ProjectProps[] = [
     },
     {
         image: '/images/cat.jpeg',
-        title: 'cat',
-        desc: 'its a cat. a really cute one! YAY FOR CATS! WOOHOOO',
-        tags: ['cat', 'not a dog', 'react?', 'wowza'],
+        title: 'Data Cork',
+        desc: "Interactive dashboard builder with several different components that you can 'pin' to make the perfect dashboard for you!",
+        tags: ['Typescript', 'React', 'Next.js', 'TailwindCSS', 'Shadcn/ui'],
         source: 'https://github.com/',
         // demo: 'https://github.com/',
     },
