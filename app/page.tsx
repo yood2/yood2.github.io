@@ -7,24 +7,22 @@ const projects: ProjectProps[] = ProjectList;
 export default function Home() {
     return (
         <>
-            <div className="space-y-8 py-8">
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-                    Hi, I&apos;m Daniel! 👋
-                </h1>
-                <Personal />
-                <p className="text-base sm:text-lg">
-                    I am a student at the University of British Columbia doing a
-                    combined major in Business and Computer Science. I like fast
-                    code 💻, chess ♟️, and coffee ☕️.
-                </p>
-                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-                    Some fun stuff I&apos;m working on:
-                </h3>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-                    {projects.map((project, index) => (
-                        <Project key={index} {...project} />
-                    ))}
-                </div>
+            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                Hi, I&apos;m Daniel! 👋
+            </h1>
+            <Personal />
+            <p className="text-base sm:text-lg">
+                I am a student at the University of British Columbia doing a
+                combined major in Business and Computer Science. I like fast
+                code 💻, chess ♟️, and coffee ☕️.
+            </p>
+            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                Some fun stuff I&apos;m working on:
+            </h3>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+                {projects.map((project, index) => (
+                    <Project key={index} {...project} />
+                ))}
             </div>
         </>
     );

@@ -30,7 +30,7 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable}, min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-8 sm:py-16 px-8`}
             >
                 <Navbar />
-                {children}
+                <div className="space-y-8 py-8">{children}</div>
             </body>
         </html>
     );
