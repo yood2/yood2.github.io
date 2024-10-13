@@ -1,5 +1,3 @@
-# yood2 - personal website
+# Personal Wesbite
 
-Created using:
-- `npm create vite@latest`
-- ChakraUI for the styled components
+Shadcn/ui and Radix for ui
