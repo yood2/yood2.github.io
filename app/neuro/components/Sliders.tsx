@@ -1,12 +1,12 @@
 import { Slider } from '@/components/ui/slider';
 import { SlidersProps } from '../types/schema';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
 import {
-    Card,
-    CardHeader,
-    CardFooter,
-    CardContent,
-    CardTitle,
-} from '@/components/ui/card';
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from '@/components/ui/popover';
 
 export default function Sliders({
     batchesPerSecond,
@@ -15,34 +15,37 @@ export default function Sliders({
     setChartSize,
 }: SlidersProps) {
     return (
-        <Card className="flex flex-col h-full">
-            <CardHeader>
-                <CardTitle className="text-lg">Chart Settings</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <h2 className="text-lg font-sans mb-2">
-                    Batches Per Second: {batchesPerSecond}
-                </h2>
-                <Slider
-                    defaultValue={[batchesPerSecond]}
-                    min={1}
-                    max={60}
-                    step={1}
-                    onValueCommit={(value) => setBatchesPerSecond(value[0])}
-                />
-
-                <h2 className="text-lg font-sans mb-2">
-                    Chart Size: {chartSize}
-                </h2>
-                <Slider
-                    defaultValue={[chartSize]}
-                    min={1}
-                    max={60}
-                    step={1}
-                    onValueCommit={(value) => setChartSize(value[0])}
-                />
-            </CardContent>
-            <CardFooter></CardFooter>
-        </Card>
+        <Popover>
+            <PopoverTrigger asChild>
+                <Button variant="outline">Chart Settings</Button>
+            </PopoverTrigger>
+            <PopoverContent>
+                <div className="space-y-2">
+                    <div className="space-y-2">
+                        {' '}
+                        <Label>Batches Per Second: {batchesPerSecond}</Label>
+                        <Slider
+                            defaultValue={[batchesPerSecond]}
+                            min={1}
+                            max={60}
+                            step={1}
+                            onValueCommit={(value) =>
+                                setBatchesPerSecond(value[0])
+                            }
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <Label>Chart Size: {chartSize}</Label>
+                        <Slider
+                            defaultValue={[chartSize]}
+                            min={1}
+                            max={60}
+                            step={1}
+                            onValueCommit={(value) => setChartSize(value[0])}
+                        />
+                    </div>
+                </div>
+            </PopoverContent>
+        </Popover>
     );
 }

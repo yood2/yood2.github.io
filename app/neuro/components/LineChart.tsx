@@ -51,7 +51,7 @@ const LineCharts: React.FC<{ renderData: Props[] }> = ({ renderData }) => {
                     stroke="#413ea0"
                 />
             </LineChart>
-            <h2>LineChart FPS: {fps}</h2>
+            <h2>fps: {fps}</h2>
         </>
     );
 };

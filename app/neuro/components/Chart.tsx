@@ -14,20 +14,14 @@ export default function Chart() {
     return (
         <>
             <div className="flex flex-col items-center space-y-6 py-4">
+                <Sliders
+                    batchesPerSecond={batchesPerSecond}
+                    setBatchesPerSecond={setBatchesPerSecond}
+                    chartSize={chartSize}
+                    setChartSize={setChartSize}
+                />
                 <LineChart renderData={rechartsProcessing(renderData)} />
-                <div className="w-full flex justify-center gap-6">
-                    <div className="flex-1">
-                        <Table renderData={rechartsProcessing(renderData)} />
-                    </div>
-                    <div className="w-1/4 self-start">
-                        <Sliders
-                            batchesPerSecond={batchesPerSecond}
-                            setBatchesPerSecond={setBatchesPerSecond}
-                            chartSize={chartSize}
-                            setChartSize={setChartSize}
-                        />
-                    </div>
-                </div>
+                <Table renderData={rechartsProcessing(renderData)} />
             </div>
         </>
     );
