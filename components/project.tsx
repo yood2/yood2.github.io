@@ -13,7 +13,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export interface ProjectProps {
-    image: string;
+    image?: string;
     title: string;
     desc: string;
     tags: string[];
@@ -59,7 +59,7 @@ export default function Project(props: ProjectProps) {
     return (
         <Card className="flex flex-col h-full">
             <CardHeader className="flex-grow">
-                <div className="aspect-video w-full relative mb-2">
+                {/* <div className="aspect-video w-full relative mb-2">
                     <Image
                         src={props.image}
                         alt={`Image for ${props.title}`}
@@ -67,7 +67,7 @@ export default function Project(props: ProjectProps) {
                         objectFit="cover"
                         className="rounded-md"
                     />
-                </div>
+                </div> */}
                 <CardTitle className="text-lg">{props.title}</CardTitle>
                 <CardDescription className="text-sm">
                     {props.desc}

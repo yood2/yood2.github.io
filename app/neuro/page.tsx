@@ -18,10 +18,13 @@ export default function Neuro() {
                 anyone interested in research.
             </p>
             <p>
-                Below is a example of our Neuro-Signal Visualizer component. It
-                was coded in Typescript as a modular React component. Currently,
-                it is capable of simulating neuro-signals, or can receive
-                signals at speeds of ~256Hz from a WebSocket or API.
+                Below is a interactive example of our Neuro-Signal Visualizer
+                component. It was coded in Typescript as a modular React
+                component. Currently, it is capable of simulating neuro-signals,
+                or can receive signals at speeds of ~256Hz from a WebSocket or
+                API. In order to ensure performance, the front-end is only
+                rendering batched updates which can be dynamically changed with
+                the sliders below.
             </p>
             <p>
                 Alternatively, if you want to use it as just a read tool for EDF
