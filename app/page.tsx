@@ -44,7 +44,7 @@ export default function Home() {
             </section>
             <section id="projects" className="space-y-4 py-4">
                 <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-                    Some things I&apos;m working on:
+                    Some fun stuff I&apos;m working on:
                 </h3>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
                     {projects.map((project, index) => (
