@@ -7,9 +7,8 @@ export default function useRandomDataGenerator(
 ) {
     const [renderData, setRenderData] = useState<SignalData[]>([]); // Batch data here
     const bufferRef = useRef<SignalData[]>([]); // All data here
-    const intervalTime = 1000 / batchesPerSecond;
 
-    // no websocket, just generate random data
+    // Generate random data
     const generateRandomSignalData = (): SignalData => {
         return {
             time: Date.now(),
@@ -20,6 +19,9 @@ export default function useRandomDataGenerator(
     };
 
     useEffect(() => {
+        // Calculate intervalTime inside the effect
+        const intervalTime = 1000 / batchesPerSecond;
+
         const updateRenderData = () => {
             const newRandomData = generateRandomSignalData();
             bufferRef.current.push(newRandomData);

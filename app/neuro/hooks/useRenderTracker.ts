@@ -1,8 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
+import { Props } from '../types/schema';
 
-export default function useRenderTracker(dependencies: any[]) {
+export default function useRenderTracker(dependencies: Props[]) {
     const [fps, setFps] = useState<number>(0);
     const lastRenderTime = useRef<number>(performance.now());
+
+    const memoizedDependencies = useMemo(() => dependencies, [dependencies]);
 
     useEffect(() => {
         const now = performance.now();
@@ -14,7 +17,7 @@ export default function useRenderTracker(dependencies: any[]) {
         }
 
         lastRenderTime.current = now;
-    }, dependencies);
+    }, [memoizedDependencies]);
 
     return Math.round(fps);
 }

@@ -4,7 +4,7 @@ export function rechartsProcessing(renderData: SignalData[]): Props[] {
     if (!renderData) return [];
 
     return renderData.map((entry: SignalData) => ({
-        time: new Date(entry.time).toLocaleTimeString(),
+        time: entry.time,
         signal1: entry.signals[0] || 0,
         signal2: entry.signals[1] || 0,
         signal3: entry.signals[2] || 0,

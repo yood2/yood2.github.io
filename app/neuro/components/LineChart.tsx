@@ -11,7 +11,7 @@ import useRenderTracker from '../hooks/useRenderTracker';
 import { Props } from '../types/schema';
 
 const LineCharts: React.FC<{ renderData: Props[] }> = ({ renderData }) => {
-    const fps = useRenderTracker([renderData]);
+    const fps = useRenderTracker(renderData);
 
     return (
         <>

@@ -10,7 +10,6 @@ import {
 import { Badge } from '@/components/ui/badge';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 export interface ProjectProps {
     image?: string;

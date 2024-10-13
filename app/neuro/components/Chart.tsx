@@ -3,7 +3,7 @@ import useSliderSettings from '../hooks/useSliderSettings';
 import { rechartsProcessing } from '../lib/chart-utils';
 
 import LineChart from './LineChart';
-import Table from './Table/page';
+import Table from './Table/Table';
 import Sliders from './Sliders';
 
 export default function Chart() {
