@@ -2,7 +2,6 @@
 
 import Chart from './components/Chart';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
 export default function Neuro() {
     return (
@@ -12,8 +11,8 @@ export default function Neuro() {
             </h2>
             <p>
                 A common practice within neuro-physiology research is to use
-                EEG's to monitor and model signals in the brain. In order to
-                improve accessibility to research, UBC's Multifaceted
+                EEG&apos;s to monitor and model signals in the brain. In order
+                to improve accessibility to research, UBC&apos;s Multifaceted
                 Innovations in Neurotechnology design team is creating a suite
                 of easy-to-use, open-source components that can be utilized by
                 anyone interested in research.
