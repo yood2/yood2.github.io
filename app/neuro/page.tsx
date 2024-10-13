@@ -1,6 +1,7 @@
 'use client';
 
 import { Badge } from '@/components/ui/badge';
+import BlurFade from '@/components/ui/blur-fade';
 import Chart from './components/Chart';
 import Link from 'next/link';
 
@@ -63,7 +64,9 @@ export default function Neuro() {
                     </Badge>
                 </Link>
             </div>
-            <Chart />
+            <BlurFade delay={0.25} inView>
+                <Chart />
+            </BlurFade>
         </>
     );
 }
