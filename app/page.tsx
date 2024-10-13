@@ -31,9 +31,9 @@ export default function Home() {
     return (
         <>
             <section id="about" className="space-y-4 py-4">
-                <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                     Hi, I&apos;m Daniel! 👋
-                </h3>
+                </h1>
                 <Personal />
                 <p className="text-base sm:text-lg">
                     I am a student at the University of British Columbia doing a
