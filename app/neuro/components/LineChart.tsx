@@ -15,7 +15,7 @@ const LineCharts: React.FC<{ renderData: Props[] }> = ({ renderData }) => {
 
     return (
         <>
-            <LineChart width={600} height={400} data={renderData}>
+            <LineChart width={500} height={300} data={renderData}>
                 <CartesianGrid stroke="#ccc" />
                 <XAxis dataKey="time" />
                 <YAxis />

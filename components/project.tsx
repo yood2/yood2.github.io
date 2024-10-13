@@ -12,7 +12,6 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 
 export interface ProjectProps {
-    image?: string;
     title: string;
     desc: string;
     tags: string[];

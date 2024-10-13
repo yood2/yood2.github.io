@@ -8,11 +8,8 @@ export default function Navbar() {
                 <Button variant="link" className="px-2">
                     <a href="/">About Me</a>
                 </Button>
-                {/* <Button variant="link" className="px-2">
-                    <a href="#projects">Projects</a>
-                </Button> */}
                 <Button variant="link" className="px-2">
-                    <a href="/coffee">Coffee</a>
+                    <a href="/coffee">Coffee Journal</a>
                 </Button>
             </div>
             <Separator />

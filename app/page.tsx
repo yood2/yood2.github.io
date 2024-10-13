@@ -3,9 +3,8 @@ import Project, { ProjectProps } from '@/components/project';
 
 const projects: ProjectProps[] = [
     {
-        image: '/images/cat.jpeg',
         title: 'Neuro-Signal Visualizer',
-        desc: 'Created a data visualization component for the UBC Multifaceted Innovations in NeuroTechnology design team. Can receive up to 256 signals per second and render EEG data with custom settings.',
+        desc: 'Created a data visualization component for the UBC Multifaceted Innovations in NeuroTechnology design team. Can receive signals at 256Hz and render EEG data with custom settings.',
         tags: [
             'Typescript',
             'React',
@@ -18,7 +17,6 @@ const projects: ProjectProps[] = [
         demo: '/neuro',
     },
     {
-        image: '/images/cat.jpeg',
         title: 'Data Cork',
         desc: "Interactive dashboard builder with several different components that you can 'pin' to make the perfect dashboard for you!",
         tags: ['Typescript', 'React', 'Next.js', 'TailwindCSS', 'Shadcn/ui'],
@@ -37,9 +35,8 @@ export default function Home() {
                 <Personal />
                 <p className="text-base sm:text-lg">
                     I am a student at the University of British Columbia doing a
-                    combined major in Business and Computer Science. I like
-                    programming 💻, chess ♟️, running 👟, and coffee ☕️.
-                    Currently fixated on Python internals and optimization.
+                    combined major in Business and Computer Science. I like fast
+                    code 💻, chess ♟️, and coffee ☕️.
                 </p>
             </section>
             <section id="projects" className="space-y-4 py-4">
