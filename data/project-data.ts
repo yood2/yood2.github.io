@@ -17,9 +17,17 @@ export const ProjectList: ProjectProps[] = [
     },
     {
         title: 'Data Cork',
-        desc: "Interactive dashboard builder with several different components that you can 'pin' to make the perfect dashboard for you!",
-        tags: ['Typescript', 'React', 'Next.js', 'TailwindCSS', 'Shadcn/ui'],
-        source: 'https://github.com/',
+        desc: "Building a interactive dashboard builder with several different components that you can 'pin' to make unique dashboards. Can also use existing spreadsheets and their formulas in their own 'pins'.",
+        tags: [
+            'Typescript',
+            'Rust',
+            'React',
+            'Next.js',
+            'TailwindCSS',
+            'Shadcn/ui',
+            'Tauri',
+        ],
+        // source: 'https://github.com/',
         // demo: 'https://github.com/',
     },
 ];
