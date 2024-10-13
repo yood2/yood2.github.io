@@ -34,7 +34,7 @@ export default function Generator() {
 
     return (
         <>
-            <Card className="w-[350px]">
+            <Card className="">
                 <CardHeader>
                     <CardTitle>Calculator</CardTitle>
                     <CardDescription>

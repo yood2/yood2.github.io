@@ -7,7 +7,7 @@ const projects: ProjectProps[] = ProjectList;
 export default function Home() {
     return (
         <>
-            <section id="about" className="space-y-4 py-4">
+            <div className="space-y-8 py-8">
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                     Hi, I&apos;m Daniel! 👋
                 </h1>
@@ -17,8 +17,6 @@ export default function Home() {
                     combined major in Business and Computer Science. I like fast
                     code 💻, chess ♟️, and coffee ☕️.
                 </p>
-            </section>
-            <section id="projects" className="space-y-4 py-4">
                 <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
                     Some fun stuff I&apos;m working on:
                 </h3>
@@ -27,7 +25,7 @@ export default function Home() {
                         <Project key={index} {...project} />
                     ))}
                 </div>
-            </section>
+            </div>
         </>
     );
 }
