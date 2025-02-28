@@ -1,6 +1,6 @@
 import Personal from '@/components/personal';
-import Project, { ProjectProps } from '@/components/project';
-import { ProjectList } from '@/data/project-data';
+// import Project, { ProjectProps } from '@/components/project';
+// import { ProjectList } from '@/data/project-data';
 
 export default function Home() {
     return (
@@ -14,6 +14,7 @@ export default function Home() {
                 combined major in Business and Computer Science. I like fast
                 code 💻, chess ♟️, and coffee ☕️.
             </p>
+            <p className="text-base sm:text-lg">Thanks for stopping by!</p>
         </>
     );
 }

@@ -4,6 +4,8 @@ import { Badge } from '@/components/ui/badge';
 import BlurFade from '@/components/ui/blur-fade';
 import Chart from './components/Chart';
 import Link from 'next/link';
+import Image from 'next/image';
+import Screenshot from './moss_screenshot.png';
 
 const Git = () => (
     <svg
@@ -25,38 +27,10 @@ const Git = () => (
 export default function Neuro() {
     return (
         <>
-            <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-                Neuro-Signal Visualizer
-            </h2>
-            <p className="text-base sm:text-lg">
-                A common practice in neurophysiology research is to use EEGs to
-                monitor and model brain signals. To improve accessibility to
-                this research, UBC&apos;s Multifaceted Innovations in
-                Neurotechnology design team is developing a suite of
-                easy-to-use, open-source components for anyone interested in
-                neurotechnology.
-                <br />
-                <br />
-                Below is an interactive example of our Neuro-Signal Visualizer
-                component. Developed in TypeScript as a modular React component,
-                it is capable of simulating neuro-signals or receiving signals
-                at speeds of ~256 Hz from a WebSocket or API. To ensure
-                performance, the front-end renders batched updates, which can be
-                dynamically adjusted using the sliders below.
-                <br />
-                <br />
-                Alternatively, if you want to use it as a tool for reading EDF
-                files, I have created an EDF parsing Node module, which you can
-                find{' '}
-                <Link
-                    href="https://github.com/yood2/edf-parser"
-                    className="text-blue-500 underline hover:text-blue-700"
-                >
-                    here
-                </Link>
-                .
-            </p>
-            <div>
+            <div className="flex justify-between items-center">
+                <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+                    MINT Open Source System
+                </h2>
                 <Link href="https://github.com/yood2/frontend-product-simulated-viz">
                     <Badge className="cursor-pointer text-xs">
                         <Git />
@@ -64,9 +38,40 @@ export default function Neuro() {
                     </Badge>
                 </Link>
             </div>
-            <BlurFade delay={0.25} inView>
-                <Chart />
-            </BlurFade>
+            <div className="flex flex-col items-center">
+                <p className="text-base sm:text-lg">
+                    A common practice in neurophysiology research is to use EEGs
+                    to monitor and model brain signals. To improve accessibility
+                    for this research, UBC&apos;s Multifaceted Innovations in
+                    Neurotechnology design team is developing a suite of
+                    easy-to-use, open-source components for anyone interested in
+                    neurotechnology.
+                    <br />
+                    <br />
+                </p>
+                <BlurFade delay={0.25} inView>
+                    <Image
+                        src={Screenshot}
+                        height={500}
+                        width={500}
+                        alt="screenshot of the UI"
+                    />
+                </BlurFade>
+                <p className="text-base sm:text-lg">
+                    Below is an interactive example of our Neuro-Signal
+                    Visualizer component. Developed in TypeScript as a modular
+                    React component, it is capable of simulating neuro-signals
+                    or receiving signals at speeds of ~256 Hz from a WebSocket
+                    or API. To ensure performance, the front-end renders batched
+                    updates, which can be dynamically adjusted using the sliders
+                    below.
+                    <br />
+                    <br />
+                </p>
+                <BlurFade delay={0.5} inView>
+                    <Chart />
+                </BlurFade>
+            </div>
         </>
     );
 }
