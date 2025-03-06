@@ -31,7 +31,7 @@ export default function Neuro() {
                 <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
                     MINT Open Source System
                 </h2>
-                <Link href="https://github.com/yood2/frontend-product-simulated-viz">
+                <Link href="https://github.com/UBCMint/mint-frontend-product">
                     <Badge className="cursor-pointer text-xs">
                         <Git />
                         <span className="ml-1">Source</span>
@@ -68,7 +68,7 @@ export default function Neuro() {
                     <br />
                     <br />
                 </p>
-                <BlurFade delay={0.5} inView>
+                <BlurFade delay={0.4} inView>
                     <Chart />
                 </BlurFade>
             </div>
