@@ -27,7 +27,7 @@ export const ProjectList: ProjectProps[] = [
             'Shadcn/ui',
         ],
         source: 'https://github.com/yood2/frontend-product-simulated-viz',
-        demo: '/moss',
+        demo: '/projects/moss',
     },
     {
         title: 'Data Cork',

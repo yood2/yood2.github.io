@@ -10,7 +10,7 @@ export default function Navbar() {
                     <Link href="/">Home</Link>
                 </Button>
                 {/* <Button variant="link" className="px-2">
-                    <a href="/coffee">Coffee Journal</a>
+                    <a href="/projects">Projects</a>
                 </Button> */}
             </div>
             <Separator />
