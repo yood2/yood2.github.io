@@ -75,8 +75,8 @@ export default function Thinkpad() {
                 <li>
                     <Link href="https://web.archive.org/web/20230807224128/https://octoperf.com/blog/2018/11/07/thinkpad-t440p-buyers-guide/">
                         <Button variant="link">
-                            Jerome Loisel's "Thinkpad T440p Ultimate Buyer's
-                            Guide"
+                            Jerome Loisel&apos;s &quot;Thinkpad T440p Ultimate
+                            Buyer&apos;s Guide&quot;
                         </Button>
                     </Link>
                 </li>
