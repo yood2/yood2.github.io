@@ -30,18 +30,10 @@ export const ProjectList: ProjectProps[] = [
         demo: '/projects/moss',
     },
     {
-        title: 'Data Cork',
-        desc: "Building a interactive dashboard builder with several different components that you can 'pin' to make unique dashboards. Can also use existing spreadsheets and their formulas in their own 'pins'.",
-        tags: [
-            'Rust',
-            'Tauri',
-            'Typescript',
-            'React',
-            'Next.js',
-            'TailwindCSS',
-            'Shadcn/ui',
-        ],
+        title: 'Modded T440p',
+        desc: 'Currently working on modding a Thinkpad T440p to be used as a Linux machine. Upgrading the screen, keyboard, and internals to make it a more modern machine.',
+        tags: ['Linux', 'Thinkpad', 'T440p', 'Modding', 'Hardware'],
         // source: 'https://github.com/',
-        // demo: 'https://github.com/',
+        demo: '/projects/thinkpad',
     },
 ];

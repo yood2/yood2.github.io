@@ -13,8 +13,10 @@ export default function Home() {
             <Personal />
             <p className="text-base sm:text-lg">
                 I am a student at the University of British Columbia doing a
-                combined major in Business and Computer Science. I like fast
-                code 💻, chess ♟️, and coffee ☕️.
+                combined major in Business and Computer Science.
+                <br />
+                <br />I like building cool stuff 💻, chess ♟️, coffee ☕️, and
+                running 🏃.
             </p>
 
             <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
