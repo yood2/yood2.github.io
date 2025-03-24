@@ -16,7 +16,8 @@ export default function Home() {
                 combined major in Business and Computer Science 🎓.
             </p>
             <p className="text-base sm:text-lg">
-                I am currently a undergrad CS TA and am incoming at Amazon 💛.
+                I am currently an undergrad CS TA and an incoming intern at
+                Amazon 💛.
             </p>
             <p className="text-base sm:text-lg">
                 I like building cool stuff 💻, chess ♟️, coffee ☕️, and running
@@ -31,6 +32,9 @@ export default function Home() {
                     <Project key={index} {...project} />
                 ))}
             </div>
+            <p className="text-sm text-muted-foreground">
+                Last Updated: March 24, 2025
+            </p>
         </>
     );
 }

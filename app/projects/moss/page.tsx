@@ -38,6 +38,9 @@ export default function Neuro() {
                     </Badge>
                 </Link>
             </div>
+            <p className="text-sm text-muted-foreground">
+                Last Updated: March 24, 2025
+            </p>
             <div className="flex flex-col items-center">
                 <p className="text-base sm:text-lg">
                     A common practice in neurophysiology research is to use EEGs

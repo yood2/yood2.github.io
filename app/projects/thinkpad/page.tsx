@@ -14,6 +14,9 @@ export default function Thinkpad() {
             <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
                 The T440p
             </h2>
+            <p className="text-sm text-muted-foreground">
+                Last Updated: March 24, 2025
+            </p>
             <p className="text-base sm:text-lg">
                 Growing up, I was fascinated by computers, beginning with an old
                 Acer desktop that struggled to run even basic games like
