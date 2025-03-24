@@ -71,7 +71,7 @@ export default function Neuro() {
                     <br />
                     <br />
                 </p>
-                <BlurFade delay={0.4} inView>
+                <BlurFade delay={0.25} inView>
                     <Chart />
                 </BlurFade>
             </div>

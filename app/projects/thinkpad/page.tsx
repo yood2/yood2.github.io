@@ -1,12 +1,11 @@
 'use client';
 
-// import { Badge } from '@/components/ui/badge';
-// import BlurFade from '@/components/ui/blur-fade';
-// import Link from 'next/link';
 import Image from 'next/image';
 import BlurFade from '@/components/ui/blur-fade';
 import acer from './acer-aspire-m5630.jpg';
 import ebay from './ebay.png';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Thinkpad() {
     return (
@@ -57,7 +56,7 @@ export default function Thinkpad() {
                 <li>No backlit keyboard 😔</li>
                 <li>Windows 10 Pro</li>
             </ul>
-            <BlurFade delay={0.4} inView>
+            <BlurFade delay={0.25} inView>
                 <Image
                     src={ebay}
                     alt="Acer Aspire T180"
@@ -65,6 +64,30 @@ export default function Thinkpad() {
                     height={600}
                 />
             </BlurFade>
+            <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+                References
+            </h2>
+            <p className="text-base sm:text-lg">
+                This project would would not have been possible without the
+                following resources:
+            </p>
+            <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+                <li>
+                    <Link href="https://web.archive.org/web/20230807224128/https://octoperf.com/blog/2018/11/07/thinkpad-t440p-buyers-guide/">
+                        <Button variant="link">
+                            Jerome Loisel's "Thinkpad T440p Ultimate Buyer's
+                            Guide"
+                        </Button>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://seiba.gitlab.io/thinkpad-t440p-upgrade-guide/">
+                        <Button variant="link">
+                            Thinkpad T440p Upgrade Guide
+                        </Button>
+                    </Link>
+                </li>
+            </ul>
         </>
     );
 }
