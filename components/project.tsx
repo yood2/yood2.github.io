@@ -1,3 +1,5 @@
+'use client';
+
 import {
     Card,
     CardContent,
@@ -87,11 +89,7 @@ export default function Project(props: ProjectProps) {
             <CardFooter className="mt-auto">
                 <div className="flex flex-wrap gap-2">
                     {props.demo && (
-                        <Link
-                            href={props.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                        <Link href={props.demo}>
                             <Badge className="cursor-pointer text-xs">
                                 <Demo />
                                 <span className="ml-1">Demo</span>
@@ -99,11 +97,7 @@ export default function Project(props: ProjectProps) {
                         </Link>
                     )}
                     {props.source && (
-                        <Link
-                            href={props.source}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                        <Link href={props.source}>
                             <Badge className="cursor-pointer text-xs">
                                 <Git />
                                 <span className="ml-1">Source</span>
