@@ -16,7 +16,7 @@ export default function Home() {
                 combined major in Business and Computer Science 🎓.
             </p>
             <p className="text-base sm:text-lg">
-                I am currently a undergrad CS TA and am interning at Amazon 💛.
+                I am currently a undergrad CS TA and am incoming at Amazon 💛.
             </p>
             <p className="text-base sm:text-lg">
                 I like building cool stuff 💻, chess ♟️, coffee ☕️, and running

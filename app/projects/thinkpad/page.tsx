@@ -42,9 +42,9 @@ export default function Thinkpad() {
             </h2>
             <p className="text-base sm:text-lg">
                 I purchased my ThinkPad T440p through ebay for a decent price.
-                At the time of writing, the CAD has taken quite a hit, so I was
-                pretty happy with being able to get a decently pristene model
-                for $159CAD. The initial spec sheet:
+                At the time of writing (March 2025) the CAD has been pretty
+                weak, so I was pretty happy with being able to get a pristene
+                model for $159CAD. The initial spec sheet:
             </p>
             <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                 <li>Intel Core i5-4300M @2.6Ghz</li>
