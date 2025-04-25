@@ -17,7 +17,7 @@ export const ProjectList: ProjectProps[] = [
     // },
     {
         title: 'MINT Open Source System',
-        desc: 'Creating a open source Brain-Computer Interface for collecting and managing brain waves for the UBC Multifacted Innovations in Neuro-Tech team.',
+        desc: 'Creating a open source Brain-Computer Interface for collecting and managing brain waves.',
         tags: [
             'Typescript',
             'React',
@@ -31,13 +31,13 @@ export const ProjectList: ProjectProps[] = [
     },
     {
         title: 'Stadik',
-        desc: 'Custom react components that use Markdown files as a CMS for a static site. Made this for when I wanted to try blogging.',
+        desc: 'Custom React components that automatically render Markdown files into styled web pages, built originally for a personal blog.',
         tags: ['Typescript', 'React', 'Next.js', 'TailwindCSS', 'Shadcn/ui'],
         source: 'https://github.com/yood2/stadik',
     },
     {
         title: 'Hermes',
-        desc: 'Desktop application to help with managing investment portfolios by automating stock analysis process. Currently only does Mean-Variance Analysis but will be adding other pricing models soon.',
+        desc: 'Desktop application that automates financial analysis for investment portfolios. Currently supports Mean-Variance Analysis, with additional pricing models planned.',
         tags: [
             'Typescript',
             'React',
