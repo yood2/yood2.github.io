@@ -8,7 +8,6 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
-
 import { Badge } from '@/components/ui/badge';
 
 import Link from 'next/link';
@@ -59,7 +58,7 @@ export default function Project(props: ProjectProps) {
     return (
         <Card className="flex flex-col h-full">
             <CardHeader className="flex-grow">
-                {/* <div className="aspect-video w-full relative mb-2">
+                {/* <div className="w-full relative mb-2">
                     <Image
                         src={props.image}
                         alt={`Image for ${props.title}`}

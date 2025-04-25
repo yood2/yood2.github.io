@@ -30,10 +30,22 @@ export const ProjectList: ProjectProps[] = [
         demo: '/projects/moss',
     },
     {
-        title: 'Modded T440p',
-        desc: 'Currently working on modding a Thinkpad T440p to be used as a Linux machine. Upgrading the screen, keyboard, and internals to make it a more modern machine.',
-        tags: ['Linux', 'Thinkpad', 'T440p', 'Modding', 'Hardware'],
-        // source: 'https://github.com/',
-        demo: '/projects/thinkpad',
+        title: 'Stadik',
+        desc: 'Custom react components that use Markdown files as a CMS for a static site. Made this for when I wanted to try blogging.',
+        tags: ['Typescript', 'React', 'Next.js', 'TailwindCSS', 'Shadcn/ui'],
+        source: 'https://github.com/yood2/stadik',
+    },
+    {
+        title: 'Hermes',
+        desc: 'Desktop application to help with managing investment portfolios by automating stock analysis process. Currently only does Mean-Variance Analysis but will be adding other pricing models soon.',
+        tags: [
+            'Typescript',
+            'React',
+            'Electron',
+            'Python',
+            'yFinance',
+            'Numpy',
+        ],
+        source: 'https://github.com/yood2/hermes',
     },
 ];

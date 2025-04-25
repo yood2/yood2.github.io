@@ -1,7 +1,6 @@
 'use client';
 
 import { Badge } from '@/components/ui/badge';
-import BlurFade from '@/components/ui/blur-fade';
 import Chart from './components/Chart';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -52,14 +51,12 @@ export default function Neuro() {
                     <br />
                     <br />
                 </p>
-                <BlurFade delay={0.25} inView>
-                    <Image
-                        src={Screenshot}
-                        height={500}
-                        width={500}
-                        alt="screenshot of the UI"
-                    />
-                </BlurFade>
+                <Image
+                    src={Screenshot}
+                    height={500}
+                    width={500}
+                    alt="screenshot of the UI"
+                />
                 <p className="text-base sm:text-lg">
                     Below is an interactive example of our Neuro-Signal
                     Visualizer component. Developed in TypeScript as a modular
@@ -71,9 +68,7 @@ export default function Neuro() {
                     <br />
                     <br />
                 </p>
-                <BlurFade delay={0.25} inView>
-                    <Chart />
-                </BlurFade>
+                <Chart />
             </div>
         </>
     );
